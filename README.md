@@ -24,12 +24,14 @@ mImageView = (ImageView) findViewById(R.id.iv_photo);
 Drawable bitmap = getResources().getDrawable(R.drawable.wallpaper);
 mImageView.setImageDrawable(bitmap);
 // The MAGIC happens here!
-mAttacher = new PhotoViewAttacher(mImageView,imageHotSpot);´´´
+mAttacher = new PhotoViewAttacher(mImageView,imageHotSpot);
+```
 
 Inside PhotoViewAttacher (You can find original source code in https://github.com/chrisbanes/PhotoView)
 on method (setImageViewMatrix) you can calculate the hotspot position. Adapt this to your needs (By passing an arrayList of hotspots, for example): 
 
-```	private void setImageViewMatrix(Matrix matrix) {
+```
+private void setImageViewMatrix(Matrix matrix) {
 		ImageView imageView = getImageView();
 		if (null != imageView) {
 
@@ -55,4 +57,5 @@ on method (setImageViewMatrix) you can calculate the hotspot position. Adapt thi
 				}
 			}
 		}
-	}´´´
+	}
+	```
