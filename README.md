@@ -54,9 +54,9 @@ private void setImageViewMatrix(Matrix matrix) {
 				params.leftMargin=(int) finalX-50;
 				params.topMargin=(int) finalY-50;
 				
-				//You need to calculate  rightMargin and bottomMargin with layayout params of the previous RelativeLayout (onCreate method)
+				//You need to calculate  rightMargin and bottomMargin with layout params of the previous RelativeLayout (onCreate method)
 				params.rightMargin=(int)paramsRelative.rightMargin-params.leftMargin+43; //This 43 is the with of my hotspot
-				params.bottomMargin=(int)paramsParamsRelative.bottomMargin-params.topMargin+65; //This 64 is the height of my hotspot
+				params.bottomMargin=(int)paramsRelative.bottomMargin-params.topMargin+65; //This 64 is the height of my hotspot
 				
   				
 				imageHotSpot.setLayoutParams(params);
