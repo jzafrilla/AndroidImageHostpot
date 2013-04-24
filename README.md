@@ -7,7 +7,7 @@ Example how to add clickable Hotspots on ImageViews with zoom and pan suppots.
 
 This is an example:
 
-`setContentView(R.layout.activity_main);
+```setContentView(R.layout.activity_main);
 RelativeLayout relative = (RelativeLayout) findViewById(R.id.relative);
 imageHotSpot = new ImageView(getApplicationContext());  		
 imageHotSpot .setImageResource(R.drawable.ic_launcher);
@@ -24,7 +24,7 @@ mImageView = (ImageView) findViewById(R.id.iv_photo);
 Drawable bitmap = getResources().getDrawable(R.drawable.wallpaper);
 mImageView.setImageDrawable(bitmap);
 // The MAGIC happens here!
-mAttacher = new PhotoViewAttacher(mImageView,imageHotSpot);`
+mAttacher = new PhotoViewAttacher(mImageView,imageHotSpot);```
 
 Inside PhotoViewAttacher (You can find original source code in https://github.com/chrisbanes/PhotoView)
 on method (setImageViewMatrix) you can calculate the hotspot position. Adapt this to your needs (By passing an arrayList of hotspots, for example): 
