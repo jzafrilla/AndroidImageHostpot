@@ -1,6 +1,8 @@
 AndroidImageHostpot
 ===================
 
+REFS : https://github.com/chrisbanes/PhotoView
+
 Example how to add clickable Hotspots on ImageViews with zoom and pan suppots.
 
 This is an example:
