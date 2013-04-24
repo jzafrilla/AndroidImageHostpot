@@ -42,13 +42,23 @@ private void setImageViewMatrix(Matrix matrix) {
 			if (null != mMatrixChangeListener) {
 				RectF displayRect = getDisplayRect(matrix);
 				RelativeLayout.LayoutParams params = (LayoutParams) imageHotSpot.getLayoutParams();
+				
+				//You can get this values programatically
 				int x = 512; //hardcoded x position of this hotspot
 				int y = 320; //hardcoded y position of this hotspot
 				
+				
+				//Value 1024 (width) and 640 (height) are from the main image. You can get this values programatically
 				int finalX = (int) (displayRect.left+((x*(displayRect.right-displayRect.left)/1024)));
 				int finalY = (int) (displayRect.top+((y*(displayRect.bottom-displayRect.top)/640)));
 				params.leftMargin=(int) finalX-50;
 				params.topMargin=(int) finalY-50;
+				
+				//You need to calculate  rightMargin and bottomMargin with layayout params of the previous RelativeLayout (onCreate method)
+				params.rightMargin=(int)paramsRelative.rightMargin-params.leftMargin+43; //This 43 is the with of my hotspot
+				params.bottomMargin=(int)paramsParamsRelative.bottomMargin-params.topMargin+65; //This 64 is the height of my hotspot
+				
+  				
 				imageHotSpot.setLayoutParams(params);
 				
 				
